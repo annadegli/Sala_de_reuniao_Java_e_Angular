@@ -1,9 +1,8 @@
-package com.digital.crud.saladereuniao.repository;
+package com.digital.crud.saladereuniao.saladereuniao.repository;
 
-import com.digital.crud.saladereuniao.model.Room;
+import com.digital.crud.saladereuniao.saladereuniao.model.Room;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
-import org.springframework.data.repository.PagingAndSortingRepository;
 
 @Repository
 public interface RoomRepository extends JpaRepository<Room, Long>{
