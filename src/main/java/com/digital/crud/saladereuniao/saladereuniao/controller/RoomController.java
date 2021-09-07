@@ -42,6 +42,8 @@ public class RoomController {
     public Room createRoom (@Valid @RequestBody Room room){
         return roomRepository.save(room);
     }
+
+    @PutMapping
     public ResponseEntity<Room> updateRoom(@PathVariable (value = id), Long roomId,
                                            @Valid @RequestBody Room roomDetails) throws ResourceNotFoundException{
       Room room = roomRepository.findById(roomId)
@@ -55,7 +57,7 @@ public class RoomController {
 
 
         }
-
+    @DeleteMapping
     public Map<String, Boolean> deleteRoom(@PathVariable (value = id), Long roomI)
     throws ResourceNotFoundException{
     Room room = roomRepository.findById(roomId)
